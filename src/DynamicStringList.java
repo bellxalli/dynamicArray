@@ -1,4 +1,5 @@
-public class DynamicStringList implements StringList {
+public class DynamicStringList implements StringList 
+{
 //field(s)
     private String[] stringArray;
     private int size;
@@ -40,13 +41,13 @@ public class DynamicStringList implements StringList {
         return removed;
     }
 
-    public int size() {
-        //return size
+    public int size() 
+    {   //return size
         return size;
     }
 
-    public int capacity() {
-        //return how many elements can be held in list
+    public int capacity() 
+    {   //return how many elements can be held in list
         return stringArray.length;
     }
 }
