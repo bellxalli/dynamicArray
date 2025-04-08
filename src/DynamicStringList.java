@@ -1,11 +1,24 @@
 public class DynamicStringList implements StringList {
-    public String get(int index) {
-        // TODO Auto-generated method stub
-        return null;
+    
+    private String[] stringArray;
+
+    public DynamicStringList()
+    {
+        stringArray = new String[10];
     }
 
-    public void set(int index, String value) {
-        // TODO Auto-generated method stub
+
+    public String get(int index) 
+    {
+        //find value at given index
+        return stringArray[index];
+    }
+
+    public void set(int index, String value) 
+    {
+        //set given new value at given index
+
+        
         
     }
 
