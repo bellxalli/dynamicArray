@@ -10,25 +10,31 @@ public class DynamicStringList implements StringList {
 
 //methods
     public String get(int index) 
-    {
-        //find value at given index
+    {   //find value at given index
         return stringArray[index];
     }
 
     public void set(int index, String value) 
-    {
-        //set given new value at given index       
+    {   //set given new value at given index       
         stringArray[index] = value;
     }
 
-    public void add(String value) {
-        // TODO Auto-generated method stub
-        
+    public void add(String value) 
+    {   //add new string at end of list
+        stringArray[stringArray.length-1] = value;        
     }
 
-    public String remove(int index) {
-        // TODO Auto-generated method stub
-        return null;
+    public String remove(int index) 
+    {   //remove value at given index and return removed vlaue
+
+        for(int i = 0; i < stringArray.length-1; i++;)
+        {
+            
+        }
+        
+        String removed = stringArray[index];
+
+        return removed;
     }
 
     public int size() {
