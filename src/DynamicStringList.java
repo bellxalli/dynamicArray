@@ -1,11 +1,13 @@
 public class DynamicStringList implements StringList {
 //field(s)
     private String[] stringArray;
+    private int size;
 
 //constructor
     public DynamicStringList()
     {
         stringArray = new String[10];
+        size = 10;
     }
 
 //methods
@@ -26,24 +28,25 @@ public class DynamicStringList implements StringList {
 
     public String remove(int index) 
     {   //remove value at given index and return removed vlaue
-
-        for(int i = 0; i < stringArray.length-1; i++;)
-        {
-            
-        }
-        
         String removed = stringArray[index];
+        
+        for(int i = index + 1; i < stringArray.length-1; i++)
+        {
+            stringArray[i-1] = stringArray[i];
+        }
 
+        size--;
+        
         return removed;
     }
 
     public int size() {
-        // TODO Auto-generated method stub
-        return 0;
+        //return size
+        return size;
     }
 
     public int capacity() {
-        // TODO Auto-generated method stub
-        return 0;
+        //return how many elements can be held in list
+        return stringArray.length;
     }
 }
