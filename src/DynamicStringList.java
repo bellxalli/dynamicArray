@@ -1,13 +1,14 @@
 public class DynamicStringList implements StringList {
-    
+//field(s)
     private String[] stringArray;
 
+//constructor
     public DynamicStringList()
     {
         stringArray = new String[10];
     }
 
-
+//methods
     public String get(int index) 
     {
         //find value at given index
@@ -16,10 +17,8 @@ public class DynamicStringList implements StringList {
 
     public void set(int index, String value) 
     {
-        //set given new value at given index
-
-        
-        
+        //set given new value at given index       
+        stringArray[index] = value;
     }
 
     public void add(String value) {
