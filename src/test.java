@@ -40,6 +40,20 @@ public class test {
 
     }//end removeShiftsElementsLeft
 
+    @Test
+        public void setAndGetUpdatesCorrectly() {
+        // Arrange
+            DynamicStringList list = new DynamicStringList();
+            int middleOfList = list.capacity() / 2; //finds the middle of the list
+            String updatedValue = "listIsUpdated";
+
+        // Act
+            list.set(middleOfList, updatedValue); //sets the middle index of the list to updatedValue
+
+        // Assert
+            assertEquals(updatedValue, list.get(middleOfList)); //expected res: listIsUpdated (updatedValue)
+
+    } //end setAndGetUpdatesCorrectly
 
 
 }//end test
