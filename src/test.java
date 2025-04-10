@@ -69,4 +69,18 @@ public class test {
 
     } //end sizeReturnsCorrectValue
 
+    @Test
+        public void capacityReturnsCorrectValue() {
+        // Arrange
+            DynamicStringList list = new DynamicStringList(); // capacity is 10
+            int expectedCapacity = 10;
+
+        // Act
+            int actualCapacity = list.capacity();
+
+        // Assert
+            assertEquals(expectedCapacity, actualCapacity); // expected res: 10
+
+    } //end capacityReturnsCorrectValue
+
 }//end test
