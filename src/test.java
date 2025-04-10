@@ -55,5 +55,18 @@ public class test {
 
     } //end setAndGetUpdatesCorrectly
 
+    @Test
+    public void sizeReturnsCorrectValue() {
+        // Arrange
+            DynamicStringList list = new DynamicStringList(); // size is 10
+            int expectedSize = 10;
+
+        // Act
+            int actualSize = list.size();
+
+        // Assert
+            assertEquals(expectedSize, actualSize); // expected res: 10
+
+    } //end sizeReturnsCorrectValue
 
 }//end test
